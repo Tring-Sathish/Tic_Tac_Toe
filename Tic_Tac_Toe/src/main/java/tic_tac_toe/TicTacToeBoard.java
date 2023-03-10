@@ -31,7 +31,7 @@ public class TicTacToeBoard {
     Boolean owins = win('o', patterns);
     if ((xwins) && (owins)) {
       return "UnreachableState";
-    } else if (xwins != null) {
+    } else if (xwins) {
       return "Xwins";
     } else if (owins) {
       return "Owins";
