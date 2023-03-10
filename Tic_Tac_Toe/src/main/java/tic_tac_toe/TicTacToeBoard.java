@@ -8,7 +8,6 @@ public class TicTacToeBoard {
 
   public static String evaluateBoard(String boardstate) {
     String patterns = boardstate.toLowerCase();
-    // Logger logger = Logger.getLogger("TicTacToeBoard");
 
     if (boardstate.length() != 9) {
       return "InvalidInput";
@@ -62,9 +61,9 @@ public class TicTacToeBoard {
     return (patterns.charAt(2) == checker && patterns.charAt(4) == checker && patterns.charAt(6) == checker);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
     Logger logger = Logger.getLogger("TicTacToeBoard");
-    logger.info(evaluateBoard("O...X.X.."));
+    logger.info("{}", evaluateBoard("O...X.X.."));
     logger.info(evaluateBoard("XXX...oo."));
     logger.info(evaluateBoard("...Xxx.oo"));
     logger.info(evaluateBoard("oo....xxx"));
