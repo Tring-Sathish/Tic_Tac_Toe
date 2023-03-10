@@ -61,20 +61,30 @@ public class TicTacToeBoard {
     return (patterns.charAt(2) == checker && patterns.charAt(4) == checker && patterns.charAt(6) == checker);
   }
 
-  public static void main(String[] args) {
+  public static void main(String args[]) {
+
     Logger logger = Logger.getLogger("TicTacToeBoard");
-    logger.info("{}", evaluateBoard("O...X.X.."));
-    logger.info(evaluateBoard("XXX...oo."));
-    logger.info(evaluateBoard("...Xxx.oo"));
-    logger.info(evaluateBoard("oo....xxx"));
-    logger.info(evaluateBoard("x..x..xoo"));
-    logger.info(evaluateBoard(".x..xoox."));
-    logger.info(evaluateBoard("..xoox..x"));
-    logger.info(evaluateBoard("x...x.oox"));
-    logger.info(evaluateBoard("..x.x.xoo"));
-    logger.info(evaluateBoard("ooo..xx.."));
-    logger.info(evaluateBoard("O...X.X...."));
-    logger.info(evaluateBoard("Oooxxx..."));
-    logger.info(evaluateBoard("oxooxooxo"));
+    String msg = evaluateBoard("O...X.X..");
+    logger.info(msg);
+    msg = evaluateBoard("...Xxx.oo");
+    logger.info(msg);
+    msg = evaluateBoard("oo....xxx");
+    logger.info(msg);
+    msg = evaluateBoard("x..x..xoo");
+    logger.info(msg);
+    msg = evaluateBoard(".x..xoox.");
+    logger.info(msg);
+    msg = evaluateBoard("..xoox..x");
+    logger.info(msg);
+    msg = evaluateBoard("x...x.oox");
+    logger.info(msg);
+    msg = evaluateBoard("..x.x.xoo");
+    logger.info(msg);
+    msg = evaluateBoard("ooo..xx..");
+    logger.info(msg);
+    msg = evaluateBoard("Oooxxx...");
+    logger.info(msg);
+    msg = evaluateBoard("oxooxooxo");
+    logger.info(msg);
   }
 }
