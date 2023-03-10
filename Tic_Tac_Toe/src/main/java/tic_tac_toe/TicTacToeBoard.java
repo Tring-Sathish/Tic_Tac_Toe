@@ -31,9 +31,9 @@ public class TicTacToeBoard {
     Boolean owins = win('o', patterns);
     if ((xwins) && (owins)) {
       return "UnreachableState";
-    } else if (xwins) {
+    } else if (xwins == true) {
       return "Xwins";
-    } else if (owins) {
+    } else if (owins == true) {
       return "Owins";
     } else {
       return "NoWinner";
@@ -61,7 +61,7 @@ public class TicTacToeBoard {
     return (patterns.charAt(2) == checker && patterns.charAt(4) == checker && patterns.charAt(6) == checker);
   }
 
-  public static void main(String args[]) {
+  public static void main(String[] args) {
 
     Logger logger = Logger.getLogger("TicTacToeBoard");
     String msg = evaluateBoard("O...X.X..");
